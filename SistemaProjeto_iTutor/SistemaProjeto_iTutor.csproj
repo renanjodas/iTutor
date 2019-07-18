@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACAB0B83-3D78-460C-8835-A6A3014A5D0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaProjeto_iTutor</RootNamespace>
+    <AssemblyName>SistemaProjeto_iTutor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itext.io">
+      <HintPath>..\iText7-dotnet-7.0.0\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadastros\FormCadastroAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroAluno.Designer.cs">
+      <DependentUpon>FormCadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroAula.Designer.cs">
+      <DependentUpon>FormCadastroAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroEndereco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroEndereco.Designer.cs">
+      <DependentUpon>FormCadastroEndereco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroPrimeiroAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroPrimeiroAcesso.Designer.cs">
+      <DependentUpon>FormCadastroPrimeiroAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FormCadastroProfessor.Designer.cs">
+      <DependentUpon>FormCadastroProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AdaptarParametros.cs" />
+    <Compile Include="Classes\Autenticacao.cs" />
+    <Compile Include="Classes\Banco.cs" />
+    <Compile Include="Classes\Limpar.cs" />
+    <Compile Include="Classes\ValidarCampos.cs" />
+    <Compile Include="Connected Services\WSCorreios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\FormRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FormRelatorios.Designer.cs">
+      <DependentUpon>FormRelatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilitarios\FormGerenciar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilitarios\FormGerenciar.Designer.cs">
+      <DependentUpon>FormGerenciar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilitarios\FormUtilitarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilitarios\FormUtilitarios.Designer.cs">
+      <DependentUpon>FormUtilitarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cadastros\FormCadastroAluno.resx">
+      <DependentUpon>FormCadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FormCadastroAula.resx">
+      <DependentUpon>FormCadastroAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FormCadastroEndereco.resx">
+      <DependentUpon>FormCadastroEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FormCadastroPrimeiroAcesso.resx">
+      <DependentUpon>FormCadastroPrimeiroAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FormCadastroProfessor.resx">
+      <DependentUpon>FormCadastroProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorios\FormRelatorios.resx">
+      <DependentUpon>FormRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilitarios\FormGerenciar.resx">
+      <DependentUpon>FormGerenciar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilitarios\FormUtilitarios.resx">
+      <DependentUpon>FormUtilitarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\WSCorreios\AtendeClienteService.wsdl" />
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.atualizaPagamentoNaEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.atualizaRemessaAgrupadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.bloquearObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaDataAtualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaPagamentoEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaServicosAdicionaisAtivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaServicosValorDeclaradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaServicosXServicosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.buscaTarifaValeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.calculaTarifaServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.cancelarObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.cancelarPedidoScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.clienteERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.consultaCEPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.consultaSROResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.consultaSRO_NEWResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.contratoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.embalagemLRSMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.enderecoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.fechaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.fechaPlpVariosServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.geraDigitoVerificadorEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.getStatusCartaoPostagemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.getStatusPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.integrarUsuarioScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.obterClienteAtualizacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.obterEmbalagemLRSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.retornoCancelamento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.servicoAdicionalXML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.servicoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.solicitaEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.solicitaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.solicitarPostagemScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.solicitaXmlPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.statusCartao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.statusPlp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.valePostal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.validaEtiquetaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.validaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.validarPostagemReversaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.validarPostagemSimultaneaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.verificaDisponibilidadeServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SistemaProjeto_iTutor.WSCorreios.VerificaSeTodosObjetosCanceladosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_102345 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_102355.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_102355 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_102355 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_102355 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linha2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linha3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linha4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linha5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_102349 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cv_102350.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_102325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotation_102346.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_102333.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistic_102337.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist_102320.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WSCorreios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+    <None Include="Connected Services\WSCorreios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WSCorreios\configuration.svcinfo" />
+    <None Include="Connected Services\WSCorreios\configuration91.svcinfo" />
+    <None Include="Resources\3643784-bell-notification-notify-reminder-ring_113451 %281%29.png" />
+    <None Include="Resources\3643772-archive-archives-document-folder-open_113445 %281%29.png" />
+    <None Include="Resources\3643779-clock-hour-ticker-time-times_113446.png" />
+    <None Include="Resources\3643749-edit-pen-pencil-write-writing_113397.png" />
+    <None Include="Resources\3643763-list-mark-menu-option-sign_113447.png" />
+    <None Include="Resources\1497619898-jd24_85173.png" />
+    <None Include="Resources\1497619898-jd24_85173 %281%29.png" />
+    <None Include="Resources\3643745-human-man-people-person-profile_113435.png" />
+    <None Include="Resources\3643747-friend-group-people-peoples-team_113434 %281%29.png" />
+    <None Include="Resources\3643757-computer-desktop-monitor-pc-personal_113441.png" />
+    <None Include="Resources\3643749-edit-pen-pencil-write-writing_1133971.png" />
+    <None Include="Resources\access.png" />
+    <Content Include="Resources\bigcancelsymbol_121964.png" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\report1.png" />
+    <None Include="Resources\refreshingcurvearrows_121971 %281%2911.png" />
+    <None Include="Resources\refreshingcurvearrows_121971 %281%292.png" />
+    <None Include="Resources\pdf1.png" />
+    <None Include="Resources\medical-history1.png" />
+    <None Include="Resources\medical-history%281%291.png" />
+    <None Include="Resources\iconfinder_user-group-new_236321.png" />
+    <None Include="Resources\house1.png" />
+    <None Include="Resources\house%281%291.png" />
+    <None Include="Resources\garbage1.png" />
+    <None Include="Resources\file%281%291.png" />
+    <None Include="Resources\eraser1.png" />
+    <None Include="Resources\edit%283%291.png" />
+    <None Include="Resources\edit%282%291.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\create1.png" />
+    <None Include="Resources\clipboard1.png" />
+    <None Include="Resources\circularplusbutton_1219821.png" />
+    <None Include="Resources\bigcancelsymbol_1219641.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\cancel-music.png" />
+    <None Include="Resources\cancel-music %281%29.png" />
+    <Content Include="Resources\circularplusbutton_121982.png" />
+    <Content Include="Resources\clipboard.png" />
+    <None Include="Resources\coins-stacks-money_icon-icons.com_56191.png" />
+    <Content Include="Resources\create.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\edit%282%29.png" />
+    <Content Include="Resources\edit%283%29.png" />
+    <Content Include="Resources\eraser.png" />
+    <Content Include="Resources\file%281%29.png" />
+    <Content Include="Resources\garbage.png" />
+    <None Include="Resources\hourglass.png" />
+    <Content Include="Resources\house%281%29.png" />
+    <Content Include="Resources\house.png" />
+    <Content Include="Resources\iconfinder_user-group-new_23632.png" />
+    <None Include="Resources\loupe.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\magnifier %281%29.png" />
+    <Content Include="Resources\medical-history%281%29.png" />
+    <Content Include="Resources\medical-history.png" />
+    <None Include="Resources\paper-plane.png" />
+    <Content Include="Resources\pdf.png" />
+    <Content Include="Resources\refreshingcurvearrows_121971 %281%29.png" />
+    <Content Include="Resources\refreshingcurvearrows_121971 %281%291.png" />
+    <Content Include="Resources\report.png" />
+    <Content Include="Resources\save.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
